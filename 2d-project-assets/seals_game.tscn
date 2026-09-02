@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://nail6f8vrigo"]
+
+[ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_08gei"]
+[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://tree.tscn" id="2_dvvpt"]
+
+[node name="Game" type="Node2D" unique_id=1711068022]
+y_sort_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=266365877]
+offset_right = 1958.0
+offset_bottom = 1123.0
+
+[node name="Player" parent="." unique_id=1078944527 instance=ExtResource("1_08gei")]
+position = Vector2(798, 577)
+
+[node name="pine tree" parent="." unique_id=1770389768 instance=ExtResource("2_dvvpt")]
+position = Vector2(378, 867)
+
+[node name="pine tree2" parent="." unique_id=103348742 instance=ExtResource("2_dvvpt")]
+position = Vector2(1789, 861)
+
+[node name="pine tree3" parent="." unique_id=358265545 instance=ExtResource("2_dvvpt")]
+position = Vector2(286, 302)
+
+[node name="pine tree4" parent="." unique_id=1777819135 instance=ExtResource("2_dvvpt")]
+position = Vector2(1076, 242)
+
+[node name="pine tree5" parent="." unique_id=66538235 instance=ExtResource("2_dvvpt")]
+position = Vector2(553, 959)
+
+[node name="pine tree6" parent="." unique_id=997964554 instance=ExtResource("2_dvvpt")]
+position = Vector2(1258, 711)
