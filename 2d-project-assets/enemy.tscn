@@ -7,6 +7,7 @@
 radius = 60.074955
 
 [node name="enemy" type="CharacterBody2D" unique_id=108647496]
+collision_layer = 2
 script = ExtResource("1_4gyqm")
 
 [node name="Slime" parent="." unique_id=2008890567 instance=ExtResource("1_7k104")]
