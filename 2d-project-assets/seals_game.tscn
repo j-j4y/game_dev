@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_08gei"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://tree.tscn" id="2_dvvpt"]
+[ext_resource type="PackedScene" uid="uid://v45siqi72g4b" path="res://enemy.tscn" id="3_sr4e8"]
 
 [node name="Game" type="Node2D" unique_id=1711068022]
 y_sort_enabled = true
@@ -30,3 +31,6 @@ position = Vector2(553, 959)
 
 [node name="pine tree6" parent="." unique_id=997964554 instance=ExtResource("2_dvvpt")]
 position = Vector2(1258, 711)
+
+[node name="enemy" parent="." unique_id=108647496 instance=ExtResource("3_sr4e8")]
+position = Vector2(1176, 427)
