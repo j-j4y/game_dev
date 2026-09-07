@@ -24,6 +24,16 @@ offset_bottom = 1123.0
 [node name="Player" parent="." unique_id=1078944527 instance=ExtResource("1_08gei")]
 position = Vector2(798, 577)
 
+[node name="Path2D" type="Path2D" parent="Player" unique_id=1062467254]
+position = Vector2(-798, -577)
+scale = Vector2(0.9879202, 1)
+curve = SubResource("Curve2D_auq32")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=479696648]
+unique_name_in_owner = true
+position = Vector2(-140, -216)
+rotation = 1.6218419
+
 [node name="pine tree" parent="." unique_id=1770389768 instance=ExtResource("2_dvvpt")]
 position = Vector2(378, 867)
 
@@ -42,17 +52,37 @@ position = Vector2(553, 959)
 [node name="pine tree6" parent="." unique_id=997964554 instance=ExtResource("2_dvvpt")]
 position = Vector2(1258, 711)
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1062467254]
-scale = Vector2(0.9879202, 1)
-curve = SubResource("Curve2D_auq32")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=479696648]
-unique_name_in_owner = true
-position = Vector2(-140, -216)
-rotation = 1.6218419
-
 [node name="Timer" type="Timer" parent="." unique_id=922484424]
 wait_time = 0.4
 autostart = true
 
+[node name="Game Over" type="CanvasLayer" parent="." unique_id=1429009994]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Game Over" unique_id=1958687208]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="Label" type="Label" parent="Game Over/ColorRect" unique_id=829545896]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -11.5
+offset_right = 50.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "Game Over :("
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
