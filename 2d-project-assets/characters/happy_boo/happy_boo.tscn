@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="2_62bos"]
 [ext_resource type="Texture2D" uid="uid://b3e4kkrfbvr1g" path="res://characters/happy_boo/square_foot.png" id="3_186qq"]
 [ext_resource type="Texture2D" uid="uid://ctaptg6l2xt0l" path="res://characters/flipper.png" id="4_2wjx3"]
-[ext_resource type="Texture2D" uid="uid://dgd62havw7eu8" path="res://characters/happy_boo/square_upper_leg.png" id="5_q2t1e"]
 [ext_resource type="Texture2D" uid="uid://4r3f6cbwhvb1" path="res://characters/new_seal_top.png" id="6_2wjx3"]
 [ext_resource type="Texture2D" uid="uid://c8nnwxs1l12em" path="res://characters/happy_boo/square_face.png" id="7_h5h8s"]
 
@@ -589,10 +588,10 @@ libraries/ = SubResource("AnimationLibrary_wrcpu")
 playback_default_blend_time = 0.2
 
 [node name="GroundShadow" type="Sprite2D" parent="." unique_id=1159294358]
-modulate = Color(0.898039, 0.878431, 0.831373, 1)
+modulate = Color(0.29662487, 0.538851, 0.61626065, 1)
 z_index = -1
 z_as_relative = false
-position = Vector2(-2, -6.9999995)
+position = Vector2(-2, -7.0000005)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_62bos")
 
@@ -602,8 +601,9 @@ texture = ExtResource("2_62bos")
 position = Vector2(-10.6303, -27.3998)
 rotation = 0.4009
 scale = Vector2(0.997829, 0.999794)
-texture = ExtResource("5_q2t1e")
+texture = ExtResource("4_2wjx3")
 offset = Vector2(0, 6)
+flip_h = true
 
 [node name="SquareLowerLegL" type="Sprite2D" parent="Colorizer/SquareUpperLegL" unique_id=435218781]
 position = Vector2(0, 14)
@@ -622,7 +622,7 @@ offset = Vector2(-4, 0)
 position = Vector2(9.20459, -29.9444)
 rotation = -0.213676
 scale = Vector2(0.999794, 0.999794)
-texture = ExtResource("5_q2t1e")
+texture = ExtResource("4_2wjx3")
 offset = Vector2(0, 6)
 
 [node name="SquareLowerLegR" type="Sprite2D" parent="Colorizer/SquareUpperLegR" unique_id=954989588]
