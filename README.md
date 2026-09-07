@@ -1,4 +1,3 @@
 # game_dev
 links to tutorials:
-base game: https://www.youtube.com/watch?v=GwCiGixlqiU
-
+[basic game code]([url](https://www.youtube.com/watch?v=GwCiGixlqiU))
