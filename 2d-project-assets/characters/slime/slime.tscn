@@ -24,7 +24,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Anchor/SlimeBody:scale")
+tracks/1/path = NodePath("Anchor/SeaLionBody:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -112,7 +112,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Anchor/SlimeBody/SlimeBodyHurt:modulate:a")
+tracks/3/path = NodePath("Anchor/SeaLionBody/SeaLionBodyHurt:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -140,7 +140,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Anchor/SlimeBody:scale")
+tracks/1/path = NodePath("Anchor/SeaLionBody:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -181,7 +181,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Anchor/SlimeBody:scale")
+tracks/1/path = NodePath("Anchor/SeaLionBody:scale")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -211,7 +211,7 @@ _data = {
 &"walk": SubResource("Animation_l6fy2")
 }
 
-[node name="Slime" type="Node2D" unique_id=2008890567]
+[node name="Sea Lion" type="Node2D" unique_id=2008890567]
 script = ExtResource("1_87y5x")
 
 [node name="GroundShadow" type="Sprite2D" parent="." unique_id=2019923751]
@@ -224,11 +224,11 @@ texture = ExtResource("1_cq7ej")
 
 [node name="Anchor" type="Marker2D" parent="." unique_id=794902193]
 
-[node name="SlimeBody" type="Sprite2D" parent="Anchor" unique_id=1727508908]
+[node name="SeaLionBody" type="Sprite2D" parent="Anchor" unique_id=1727508908]
 texture = ExtResource("3_648cb")
 offset = Vector2(0, -36)
 
-[node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody" unique_id=2002072866]
+[node name="SeaLionBodyHurt" type="Sprite2D" parent="Anchor/SeaLionBody" unique_id=2002072866]
 modulate = Color(1, 1, 1, 0)
 texture = ExtResource("4_pyxg0")
 offset = Vector2(0, -36)
