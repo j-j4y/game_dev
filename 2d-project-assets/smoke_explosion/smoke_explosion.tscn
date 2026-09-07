@@ -127,6 +127,7 @@ script = ExtResource("1_kb8ql")
 [node name="Smoke" type="ColorRect" parent="." unique_id=1026069877]
 unique_name_in_owner = true
 modulate = Color(0.396078, 0.396078, 0.396078, 1)
+self_modulate = Color(0.73769724, 0.7942345, 0.82687855, 1)
 material = SubResource("ShaderMaterial_dssfe")
 anchors_preset = 8
 anchor_left = 0.5
@@ -140,7 +141,7 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(64, 64)
-color = Color(0.568627, 0.568627, 0.568627, 1)
+color = Color(0.7923736, 0.79666525, 0.80375576, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1180165920]
 unique_name_in_owner = true
