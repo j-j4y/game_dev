@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ogik4s70pgwl"]
 
-[ext_resource type="Texture2D" uid="uid://c2t1crng7t58l" path="res://characters/slime/slime_body.png" id="1_3j35h"]
 [ext_resource type="Script" uid="uid://dnbjp2524b1py" path="res://characters/slime/slime.gd" id="1_87y5x"]
 [ext_resource type="Texture2D" uid="uid://dk5b8a84a6n2h" path="res://characters/ground_shadow.png" id="1_cq7ej"]
 [ext_resource type="Texture2D" uid="uid://bnd4gurtidin" path="res://characters/slime/slime_face.png" id="2_ygydt"]
-[ext_resource type="Texture2D" uid="uid://e4gtsguue7fg" path="res://characters/slime/slime_body_hurt.png" id="4_0qu0c"]
+[ext_resource type="Texture2D" uid="uid://whcwqu8v4y6x" path="res://characters/slime/sea_lion.png" id="3_648cb"]
 [ext_resource type="Texture2D" uid="uid://c7rt25t421lnf" path="res://characters/slime/slime_hurt_eyes.png" id="4_hi70h"]
+[ext_resource type="Texture2D" uid="uid://c54tm1omh2fhp" path="res://characters/slime/hurt_sea_lion.png" id="4_pyxg0"]
 
 [sub_resource type="Animation" id="Animation_y4lve"]
 length = 0.001
@@ -215,24 +215,26 @@ _data = {
 script = ExtResource("1_87y5x")
 
 [node name="GroundShadow" type="Sprite2D" parent="." unique_id=2019923751]
-modulate = Color(0.898039, 0.878431, 0.831373, 1)
+modulate = Color(0.80735296, 0.6026187, 0.55247796, 1)
 z_index = -1
 z_as_relative = false
+position = Vector2(0, -19.999998)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_cq7ej")
 
 [node name="Anchor" type="Marker2D" parent="." unique_id=794902193]
 
 [node name="SlimeBody" type="Sprite2D" parent="Anchor" unique_id=1727508908]
-texture = ExtResource("1_3j35h")
+texture = ExtResource("3_648cb")
 offset = Vector2(0, -36)
 
 [node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody" unique_id=2002072866]
 modulate = Color(1, 1, 1, 0)
-texture = ExtResource("4_0qu0c")
+texture = ExtResource("4_pyxg0")
 offset = Vector2(0, -36)
 
 [node name="Face" type="Marker2D" parent="Anchor" unique_id=1541035147]
+visible = false
 position = Vector2(0, -25)
 
 [node name="SlimeFace" type="Sprite2D" parent="Anchor/Face" unique_id=403368551]
