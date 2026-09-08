@@ -1,5 +1,6 @@
 # Seals v Sea Lions Game
-links to tutorials:
+
+## Links to Tutorials:
 * [basic game code](https://www.youtube.com/watch?v=GwCiGixlqiU)
 * [background music tutorial](https://www.youtube.com/watch?v=K-F_wgb6fqs)
 * [changing background image](https://www.youtube.com/watch?v=kBStzSGrIzQ)
@@ -12,7 +13,8 @@ links to tutorials:
 * background music: [a-duration music](https://www.youtube.com/watch?v=KhwouNXtMqo&list=PLGx12MVtGIdNGVAP2GBoASoPQCXpMJ_eK&index=27)
 
 ## Changes Made
-* swapped player and enemy textures: 30 mins
+* drawing assets: 30 mins
+* swapping player and enemy textures: 20 mins
 * changed bullet and obstacle textures: 30 mins
 * added background music: 15 mins
 * changing background: 5 mins
