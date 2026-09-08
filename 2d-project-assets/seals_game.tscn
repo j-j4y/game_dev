@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_08gei"]
 [ext_resource type="Script" uid="uid://bfhocmnq22elm" path="res://seals_game.gd" id="1_ttf6g"]
-[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://tree.tscn" id="2_dvvpt"]
+[ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://coral.tscn" id="2_dvvpt"]
+[ext_resource type="Texture2D" uid="uid://d2rt2oa67j47m" path="res://trees/water_bg.png" id="2_ttf6g"]
 
 [sub_resource type="Curve2D" id="Curve2D_auq32"]
 _data = {
@@ -18,9 +19,15 @@ script = ExtResource("1_ttf6g")
 layer = -2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=266365877]
+visible = false
 offset_right = 1958.0
 offset_bottom = 1123.0
 color = Color(0.33789894, 0.7126732, 0.74489415, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=362253776]
+offset_right = 1957.0
+offset_bottom = 1126.0
+texture = ExtResource("2_ttf6g")
 
 [node name="Player" parent="." unique_id=1078944527 instance=ExtResource("1_08gei")]
 position = Vector2(798, 577)
@@ -36,7 +43,7 @@ position = Vector2(-140, -216)
 rotation = 1.6218419
 
 [node name="pine tree" parent="." unique_id=1770389768 instance=ExtResource("2_dvvpt")]
-position = Vector2(378, 867)
+position = Vector2(242, 753)
 
 [node name="pine tree2" parent="." unique_id=103348742 instance=ExtResource("2_dvvpt")]
 position = Vector2(1789, 861)
