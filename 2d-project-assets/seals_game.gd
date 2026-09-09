@@ -1,5 +1,6 @@
 extends Node2D
 
+
 func spawn_mob():
 	var new_mob = preload("res://enemy.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
@@ -14,3 +15,6 @@ func _on_timer_timeout() -> void:
 func _on_player_health_depleted() -> void:
 	%"Game Over".visible = true
 	get_tree().paused = true
+	
+	
+	

@@ -15,7 +15,7 @@ func _physics_process(delta):
 		%HappyBoo.play_idle_animation()
 		
 	 
-	const DAMAGE_RATE = 5.0
+	const DAMAGE_RATE = 2.0
 	const EXTRA_DAMAGE_MULT = 2.0
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	
