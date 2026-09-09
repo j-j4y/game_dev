@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1sx7bic4uhdj" path="res://player.tscn" id="1_08gei"]
 [ext_resource type="Script" uid="uid://bfhocmnq22elm" path="res://seals_game.gd" id="1_ttf6g"]
+[ext_resource type="Texture2D" uid="uid://b1vm4rdcsij5v" path="res://trees/new_bg.png" id="2_auq32"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://coral.tscn" id="2_dvvpt"]
 [ext_resource type="Texture2D" uid="uid://d2rt2oa67j47m" path="res://trees/water_bg.png" id="2_ttf6g"]
 
@@ -18,17 +19,18 @@ script = ExtResource("1_ttf6g")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1340089019]
 layer = -2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=266365877]
-visible = false
-offset_right = 1958.0
-offset_bottom = 1123.0
-color = Color(0.33789894, 0.7126732, 0.74489415, 1)
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=362253776]
-offset_top = -138.0
-offset_right = 1957.0
-offset_bottom = 1126.0
+[node name="FirstBG" type="TextureRect" parent="CanvasLayer" unique_id=875806458]
+unique_name_in_owner = true
+offset_right = 1962.0
+offset_bottom = 1121.0
 texture = ExtResource("2_ttf6g")
+
+[node name="NewBG" type="TextureRect" parent="CanvasLayer" unique_id=362253776]
+unique_name_in_owner = true
+offset_top = 2.0
+offset_right = 1963.0
+offset_bottom = 1126.0
+texture = ExtResource("2_auq32")
 
 [node name="Player" parent="." unique_id=1078944527 instance=ExtResource("1_08gei")]
 position = Vector2(798, 577)
@@ -93,5 +95,11 @@ position = Vector2(1152, 671)
 [node name="coral_obstacles6" parent="." unique_id=695462397 instance=ExtResource("2_dvvpt")]
 position = Vector2(286, 311)
 
+[node name="BackgroundChange" type="Timer" parent="." unique_id=689513818]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="BackgroundChange" to="." method="_on_background_change_timeout"]

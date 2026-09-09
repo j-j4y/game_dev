@@ -17,4 +17,9 @@ func _on_player_health_depleted() -> void:
 	get_tree().paused = true
 	
 	
-	
+
+
+func _on_background_change_timeout() -> void:
+#	%NewBG.self_modulate = Color.RED
+	%NewBG.visible = false
+	%FirstBG.visible = true
