@@ -25,6 +25,7 @@ offset_bottom = 1123.0
 color = Color(0.33789894, 0.7126732, 0.74489415, 1)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=362253776]
+offset_top = -138.0
 offset_right = 1957.0
 offset_bottom = 1126.0
 texture = ExtResource("2_ttf6g")
@@ -41,24 +42,6 @@ curve = SubResource("Curve2D_auq32")
 unique_name_in_owner = true
 position = Vector2(-140, -216)
 rotation = 1.6218419
-
-[node name="pine tree" parent="." unique_id=1770389768 instance=ExtResource("2_dvvpt")]
-position = Vector2(242, 753)
-
-[node name="pine tree2" parent="." unique_id=103348742 instance=ExtResource("2_dvvpt")]
-position = Vector2(1789, 861)
-
-[node name="pine tree3" parent="." unique_id=358265545 instance=ExtResource("2_dvvpt")]
-position = Vector2(286, 302)
-
-[node name="pine tree4" parent="." unique_id=1777819135 instance=ExtResource("2_dvvpt")]
-position = Vector2(1076, 242)
-
-[node name="pine tree5" parent="." unique_id=66538235 instance=ExtResource("2_dvvpt")]
-position = Vector2(553, 959)
-
-[node name="pine tree6" parent="." unique_id=997964554 instance=ExtResource("2_dvvpt")]
-position = Vector2(1258, 711)
 
 [node name="Timer" type="Timer" parent="." unique_id=922484424]
 wait_time = 0.4
@@ -91,6 +74,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 150
 text = "Game Over :("
+
+[node name="coral_obstacles" parent="." unique_id=1770389768 instance=ExtResource("2_dvvpt")]
+position = Vector2(826, 146)
+
+[node name="coral_obstacles2" parent="." unique_id=875002173 instance=ExtResource("2_dvvpt")]
+position = Vector2(498, 843)
+
+[node name="coral_obstacles3" parent="." unique_id=1450498049 instance=ExtResource("2_dvvpt")]
+position = Vector2(1566, 274)
+
+[node name="coral_obstacles4" parent="." unique_id=1072486309 instance=ExtResource("2_dvvpt")]
+position = Vector2(1669, 865)
+
+[node name="coral_obstacles5" parent="." unique_id=618833447 instance=ExtResource("2_dvvpt")]
+position = Vector2(1152, 671)
+
+[node name="coral_obstacles6" parent="." unique_id=695462397 instance=ExtResource("2_dvvpt")]
+position = Vector2(286, 311)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
