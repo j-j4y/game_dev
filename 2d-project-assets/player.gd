@@ -22,8 +22,8 @@ func _physics_process(delta):
 		
 	 
 	#damage multipler
-	const DAMAGE_RATE = 2.0
-	const EXTRA_DAMAGE_MULT = 2.0
+	const DAMAGE_RATE = 1.0
+	const EXTRA_DAMAGE_MULT = 2.5
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	
 	if overlapping_mobs.size() > 0:
