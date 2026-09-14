@@ -46,4 +46,4 @@ func _on_coin_shape_area_area_entered(area: Area2D) -> void:
 
 func set_coin(new_coin_count: int) -> void:
 	coin_counter = new_coin_count
-	coin_label.text = "Coin Count: " + str(coin_counter)
+	coin_label.text = "Star Count: " + str(coin_counter)
