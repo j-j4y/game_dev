@@ -5,12 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://b1vm4rdcsij5v" path="res://trees/new_bg.png" id="2_auq32"]
 [ext_resource type="PackedScene" uid="uid://c0gpy0pye4jr6" path="res://coral.tscn" id="2_dvvpt"]
 [ext_resource type="Texture2D" uid="uid://d2rt2oa67j47m" path="res://trees/water_bg.png" id="2_ttf6g"]
+[ext_resource type="PackedScene" uid="uid://c4ks8hgwuajji" path="res://coin.tscn" id="6_8tk4c"]
 
 [sub_resource type="Curve2D" id="Curve2D_auq32"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -140, -216, 0, 0, 0, 0, -215, 1252, 0, 0, 0, 0, 2053, 1319, 0, 0, 0, 0, 2061, -200, 0, 0, 0, 0, -140, -216)
 }
 point_count = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwoa8"]
+font_size = 45
 
 [node name="Game" type="Node2D" unique_id=1711068022]
 y_sort_enabled = true
@@ -45,8 +49,20 @@ unique_name_in_owner = true
 position = Vector2(-140, -216)
 rotation = 1.6218419
 
-[node name="Timer" type="Timer" parent="." unique_id=922484424]
-wait_time = 0.4
+[node name="CoinLabel" type="Label" parent="Player" unique_id=1718945423]
+unique_name_in_owner = true
+offset_left = -200.0
+offset_top = -186.0
+offset_right = 244.0
+offset_bottom = -103.0
+text = "Coin Count: 0"
+label_settings = SubResource("LabelSettings_nwoa8")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="EnemySpawnTime" type="Timer" parent="." unique_id=922484424]
+unique_name_in_owner = true
+wait_time = 0.5
 autostart = true
 
 [node name="Game Over" type="CanvasLayer" parent="." unique_id=1429009994]
@@ -96,10 +112,16 @@ position = Vector2(1152, 671)
 position = Vector2(286, 311)
 
 [node name="BackgroundChange" type="Timer" parent="." unique_id=689513818]
-wait_time = 2.0
+wait_time = 25.0
 one_shot = true
 autostart = true
 
+[node name="Coin" parent="." unique_id=1909230212 instance=ExtResource("6_8tk4c")]
+position = Vector2(301, 530)
+
+[node name="Coin2" parent="." unique_id=68489104 instance=ExtResource("6_8tk4c")]
+position = Vector2(939, 880)
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="EnemySpawnTime" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="BackgroundChange" to="." method="_on_background_change_timeout"]
