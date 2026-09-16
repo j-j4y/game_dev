@@ -21,7 +21,6 @@ func _on_coin_spawn_timeout() -> void:
 
 func _on_timer_timeout() -> void:
 	spawn_mob()
-	#%EnemySpawnTime.wait_time = 2.0 #overrides timer wait time
 
 
 func _on_player_health_depleted() -> void:

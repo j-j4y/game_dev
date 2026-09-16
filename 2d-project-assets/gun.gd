@@ -21,6 +21,5 @@ func _on_timer_timeout() -> void:
 	shoot()
 
 
-
 func _on_weapon_upgrade_timeout() -> void:
 		$Timer.set_wait_time(.15)

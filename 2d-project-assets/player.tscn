@@ -72,9 +72,15 @@ debug_color = Color(0.87880254, 0.07334187, 0.8030468, 0.41960785)
 
 [node name="WeaponUpgrade" type="Timer" parent="." unique_id=1869469792]
 unique_name_in_owner = true
-wait_time = 3.0
+wait_time = 25.0
+one_shot = true
+autostart = true
+
+[node name="MovementSpeed" type="Timer" parent="." unique_id=1121156361]
+wait_time = 5.0
 one_shot = true
 autostart = true
 
 [connection signal="area_entered" from="CoinShapeArea" to="." method="_on_coin_shape_area_area_entered"]
 [connection signal="timeout" from="WeaponUpgrade" to="Gun" method="_on_weapon_upgrade_timeout"]
+[connection signal="timeout" from="MovementSpeed" to="." method="_on_movement_speed_timeout"]

@@ -4,15 +4,16 @@ signal health_depleted
 var max_health = 100.0
 var health = max_health
 var coin_counter = 0
-
+var speed = 600
 
 @onready var coin_label = %CoinLabel
 
+@onready var timer = $MovementSpeed
 
 #controlling character movements
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left","move_right", "move_up", "move_down")
-	velocity = direction * 600
+	velocity = direction * speed
 	move_and_slide() 
 	
 	if velocity.length() > 0.0:
@@ -20,7 +21,7 @@ func _physics_process(delta):
 	else:
 		%HappyBoo.play_idle_animation()
 		
-	 
+	
 	#damage multipler
 	const DAMAGE_RATE = 1.0
 	const EXTRA_DAMAGE_MULT = 2.5
@@ -37,7 +38,10 @@ func _physics_process(delta):
 		if health <= 0.0:
 			health_depleted.emit()
 
-
+func _on_movement_speed_timeout() -> void:
+	speed = 1000.0
+	
+	
 #controlling coin counter
 func _on_coin_shape_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Coin"):
