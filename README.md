@@ -18,3 +18,10 @@
 * changed bullet and obstacle textures: 30 mins
 * added background music: 15 mins
 * changing background: 5 mins
+
+## Loop Implementation
+* movement speed increase: 30 mins
+* background change: 40 mins
+* faster fire rate: 45 mins
+* coin counter: 30 mins
+* damage multiplier: 45 mins
